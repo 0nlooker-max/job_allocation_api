@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS job_position (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    beginning_salary DECIMAL(10, 2) NOT NULL
+);
