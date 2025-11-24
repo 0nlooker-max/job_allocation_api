@@ -23,7 +23,7 @@ public class EmployeesController : ControllerBase
       if (dbConnection.State != ConnectionState.Open)
         dbConnection.Open();
 
-      var sql = "SELECT * FROM employee;";
+      var sql = "SELECT * FROM job_allocation;";
 
       var employees = await dbConnection.QueryAsync<Employee>(sql);
 
