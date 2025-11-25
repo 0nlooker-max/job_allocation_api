@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:5041
+@contentType = application/json
+
+###
+# Get all job positions
+GET {{baseUrl}}/api/jobpositions
+
+###
+# Get a specific job position by ID
+GET {{baseUrl}}/api/jobpositions/1
+
+###
+# Create a new job position
+POST {{baseUrl}}/api/jobpositions
+Content-Type: {{contentType}}
+
+{
+  "id": 1,
+  "name": "Software Engineer",
+  "beginningSalary": 75000.00
+}
+
+###
+# Update an existing job position
+PUT {{baseUrl}}/api/jobpositions/1
+Content-Type: {{contentType}}
+
+{
+  "id": 1,
+  "name": "Senior Software Engineer",
+  "beginningSalary": 95000.00
+}
+
+###
+# Delete a job position
+DELETE {{baseUrl}}/api/jobpositions/1
